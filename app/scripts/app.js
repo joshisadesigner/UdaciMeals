@@ -9,4 +9,6 @@
  * Main module of the application.
  */
 angular
-  .module('udaciMealsApp', []);
+  .module('udaciMealsApp', ['ui.router']);
+
+  

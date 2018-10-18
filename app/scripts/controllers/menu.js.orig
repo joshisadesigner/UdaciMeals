@@ -8,15 +8,21 @@
  * Controller of the udaciMealsApp
  */
 angular.module('udaciMealsApp')
-  .controller('MenuCtrl', ['foodFinder', 'orderManager', function (menu, orderManager) {
+<<<<<<< Updated upstream
+  .controller('MenuCtrl', ['foodFinder', function (menu) {
     this.items = menu.items
     
     // var vm = this;
+=======
+  .controller('MenuCtrl', ['foodFinder', 'orderManager', function (menu, orderManager) {
+      var vm = this;
+>>>>>>> Stashed changes
 
     // menu.getMenu().then(function(data) {
     //   vm.items = data;
     // });
 
+<<<<<<< Updated upstream
     // this.items = [
     //   {
     //     id: 'chicken-pomegranate-salad',
@@ -50,4 +56,19 @@ angular.module('udaciMealsApp')
       item.rating = ((item.rating * 10) - 1) / 10;
     };
   }
+=======
+      this.chooseItem = function(menuCategory, menuItemName) {
+        console.log(orderManager, menuCategory, menuItemName);
+      };
+
+      this.increment = function (item) {
+        // item.rating += 0.1;
+        item.rating = ((item.rating * 10) + 1) / 10;
+      };
+      this.decrement = function (item) {
+        // item.rating -= 0.1;
+        item.rating = ((item.rating * 10) - 1) / 10;
+      };
+    }
+>>>>>>> Stashed changes
   ]);

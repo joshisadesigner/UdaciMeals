@@ -6,8 +6,17 @@
             <p>
                 Rating: {{item.rating}} 
                 <span ng-if="item.rating > 4.0" ng-class="{highlight: item.rating > 4.5}"> - Poeople love this item!</span>
-                <button ng-click="menu.increment(item)">+</button><button ng-click="menu.decrement(item)">-</button>
+                <button ng-click="menu.increment(item)">+</button>
+                <button ng-click="menu.decrement(item)">-</button>
             </p>
+            <div class="well">
+                <select name="" ng-model="item.meal">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                <button ng-click="menu.chooseItem(item.meal, item.name)">Select Item</button>
+            </div>
         </div>
     </div>
 </div>
