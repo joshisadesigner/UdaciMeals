@@ -9,7 +9,7 @@
  */
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', ['foodFinder', 'orderManager', function (menu, orderManager) {
-    this.items = menu.items
+    this.items = menu.items;
     
     // var vm = this;
 
@@ -40,6 +40,10 @@ angular.module('udaciMealsApp')
     //     rating: 3.9
     //   }
     // ];
+
+    this.chooseItem = function(menuCategory, menuItemName) {
+      orderManager.chooseMenuOption(menuCategory, menuItemName);
+    };
 
     this.increment = function (item) {
       // item.rating += 0.1;

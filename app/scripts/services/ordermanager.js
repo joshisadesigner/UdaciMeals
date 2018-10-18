@@ -10,6 +10,7 @@
 angular.module('udaciMealsApp')
   .service('orderManager', function () {
     var selectedDay = 'Monday';
+
     var orderSelection = {
       Monday: {
         breakfast: '',
@@ -44,6 +45,7 @@ angular.module('udaciMealsApp')
 
     this.setActiveDay = function(day) {
       selectedDay = day;
+      console.log(day);
     };
 
     this.chooseMenuOption = function(meal, menuItem) {
