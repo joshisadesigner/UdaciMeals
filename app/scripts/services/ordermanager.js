@@ -45,7 +45,6 @@ angular.module('udaciMealsApp')
 
     this.setActiveDay = function(day) {
       selectedDay = day;
-      console.log(day);
     };
 
     this.chooseMenuOption = function(meal, menuItem) {
